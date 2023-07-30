@@ -15,6 +15,7 @@ btn.addEventListener('click', () => {
 
     qr.decodeFromImage(img).then((res) => {
         console.log(res);
+        alert(res.data)
         // if (!res.data.contains(';')) {
         // }
         // else{
