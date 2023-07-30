@@ -1,0 +1,36 @@
+body{
+    margin: 0px;
+}
+
+span::before{
+    content: "Data: ";
+}
+p::before{
+    content: "Password: ";
+}
+
+p{
+    background-color: rgb(225, 202, 202);    
+}
+
+button{
+    background-color: blueviolet;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+img{
+    border-radius: 10px;
+    margin-top: 1em;
+    border: 1px solid purple;
+    object-fit: contain;
+}
+
+.container{
+   margin: 0 20px;
+   
+   height: 100vh;
+}
