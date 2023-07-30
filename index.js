@@ -11,9 +11,9 @@ inp.addEventListener('change', (e) => {
 
     qr.decodeFromImage(img).then((res) => {
         console.log(res);
-        if (!res.data.includes(';')) {
+        // if (!res.data.includes(';')) {
             document.querySelector('span').innerHTML = res.data;            
-        }
+        // }
         document.querySelector('.pass').innerHTML = res.data.split(";")[2].slice(2);
     });
 })
