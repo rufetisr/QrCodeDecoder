@@ -5,17 +5,7 @@ let btn = document.querySelector('button');
 inp.addEventListener('change', (e) => {
     let locImg = URL.createObjectURL(e.target.files[0]);
     img.src = locImg;
-    var qr = new QrcodeDecoder();
-    document.querySelector('span').innerHTML = "";
-    document.querySelector('.pass').innerHTML = "";
 
-    qr.decodeFromImage(img).then((res) => {
-        console.log(res);
-        // if (!res.data.includes(';')) {
-            document.querySelector('span').innerHTML = res.data;            
-        // }
-        document.querySelector('.pass').innerHTML = res.data.split(";")[2].slice(2);
-    });
 })
 
 btn.addEventListener('click', () => {
@@ -25,10 +15,17 @@ btn.addEventListener('click', () => {
 
     qr.decodeFromImage(img).then((res) => {
         console.log(res);
-        if (!res.data.includes(';')) {
-            document.querySelector('span').innerHTML = res.data;            
+        // if (!res.data.contains(';')) {
+        // }
+        // else{
+        // }
+        if (res.data.split(";")[2] == null) {
+            document.querySelector('span').innerHTML = res.data;
         }
-        document.querySelector('.pass').innerHTML = res.data.split(";")[2].slice(2);
+        else {
+            document.querySelector('.pass').innerHTML = res.data.split(";")[2].slice(2);
+        }
+
     });
 })
 
