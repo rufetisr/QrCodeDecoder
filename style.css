@@ -9,7 +9,9 @@ body{
     margin: 0px;
     box-sizing: border-box;
 }
-
+.pass, .data{
+    text-transform: none;
+}
 header img{
     width: 100px;
     height: 100px;
