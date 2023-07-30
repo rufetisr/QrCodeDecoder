@@ -10,14 +10,14 @@ inp.addEventListener('change', (e) => {
 btn.addEventListener('click', () => {
     var qr = new QrcodeDecoder();
     document.querySelector('span').innerHTML = "";
-    document.querySelector('p').innerHTML = "";
-    
+    document.querySelector('.pass').innerHTML = "";
+
     qr.decodeFromImage(img).then((res) => {
         console.log(res);
         if (!res.data.includes(';')) {
             document.querySelector('span').innerHTML = res.data;            
         }
-        document.querySelector('p').innerHTML = res.data.split(";")[2].slice(2);
+        document.querySelector('.pass').innerHTML = res.data.split(";")[2].slice(2);
     });
 })
 
