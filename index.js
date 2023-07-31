@@ -20,6 +20,7 @@ btn.addEventListener('click', () => {
         // }
         // else{
         // }
+
         if (res.data.split(";")[2] == null) {
             document.querySelector('span').innerHTML = res.data;
         }
@@ -27,7 +28,12 @@ btn.addEventListener('click', () => {
             document.querySelector('.pass').innerHTML = res.data.split(";")[2].slice(2);
         }
 
+        // if (document.querySelector('span').innerHTML == null && document.querySelector('.pass').innerHTML == null) {
+        //     alert('Şəkildə təkcə qr kod şəkli olsun, şəkildə başqa obyektlər varsa qr kod oxunmaya bilər !')
+        // }
     });
+
+
 })
 
 // document.querySelector('form').addEventListener('submit',(e)=>{
